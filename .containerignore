@@ -1,0 +1,14 @@
+# Build context exclusions.
+# This recipe has no Containerfile — start.sh pulls the prebuilt
+# ghcr.io/niko1221/strata image, so nothing is ever sent to a builder today.
+# This file is the safety net for any future build context (e.g. a derived
+# image): the ~181 GB data dir, secrets, logs and VCS data must never be
+# uploaded to a build.
+.git
+.gitignore
+example/
+strata-data/
+.env
+*.log
+__pycache__
+*.pyc

@@ -1,0 +1,17 @@
+# Secrets — copy .env.sample to .env locally; never commit
+.env
+
+# ~181 GB model files + Strata state (downloaded by the container into the
+# /data bind: Strata-data/, state/, install/)
+strata-data/
+
+# Engine log streamed by start.sh
+.hy4.log
+
+# Editor / OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+__pycache__/
+*.pyc
